@@ -1,1 +1,38 @@
-hi
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Digital-analog quantum learning on Rydberg atoms
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Jonathan Zhang
+    name-particle: Lu
+    email: lujz@mit.edu
+    affiliation: MIT Department of Mathematics
+    orcid: 'https://orcid.org/0000-0002-2806-8248'
+  - given-names: Lucy
+    family-names: Jiao
+    affiliation: Harvard University
+  - given-names: Kristina
+    family-names: Wolinski
+    affiliation: Princeton University
+  - given-names: Milan
+    family-names: Kornjaca
+    affiliation: 'QuEra Computing, Inc.'
+  - given-names: Fangli
+    family-names: Liu
+    affiliation: 'QuEra Computing, Inc.'
+  - given-names: Hongye
+    family-names: Hu
+    affiliation: Harvard University Department of Physics
+  - given-names: Shengtao
+    family-names: Wang
+    affiliation: 'QuEra Computing, Inc.'
+  - given-names: Susanne
+    family-names: Yelin
+    email: syelin@g.harvard.edu
+    affiliation: Harvard University Department of Physics
+repository-code: 'https://github.com/jz-lu/daqml'
