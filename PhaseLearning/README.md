@@ -35,3 +35,6 @@ states) that will be used in the learning, and files which perform the machine l
 </ul>
 
 #### Example: How to generate a learned phase diagram via a noisy DA circuit trained in the zAFM phase
+1. Decide on the desired size of your learned phase diagram (say, 20x20).  Using <code>XXZtrain.m</code>, generate a 20x20 testing mesh.
+2. From the 20x20 parameter mesh, pick out a state in the zAFM phase.  Input these J3/J6 and alpha values into <code>XXZtrain.m</code> to generate your desired training state.
+3. 
