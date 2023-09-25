@@ -13,7 +13,7 @@ states) that will be used in the learning, and files which perform the machine l
 
 #### Quantum Machine Learning Files
 <ul>
-  <li> <code> pl_noisy_DA.jl </code> takes seven command line arguments:
+  <li> <code> pl_noisy_DA.jl </code> performs noisy DA phase learning, and takes seven command line arguments:
   <ul>
     <li><code> lr </code> specifies the learning rate.</li>
     <li><code> depth </code> specifies the block depth of the QML circuit.</li>
@@ -27,7 +27,7 @@ states) that will be used in the learning, and files which perform the machine l
     After training is completed, the circuit with its final updated parameters is used to find the loss (average Rydberg density) at each point in the testing mesh.  This <code>mesh</code>x<code>mesh</code> array of losses is then saved in an <code>.npy</code> array titled <code>Testlosses</code> with additional labels specifed by the command line arguments.
    </li>
   
-  <li> <code> pl_noisy_D.jl  </code> </li> generates and saves a training state, which is a ground state of the XXZ Hamiltonian (with specified qubit number/parameters).
+  <li> <code> pl_noisy_D.jl  </code> </li> performs noisy digital phase learning, and takes the identical 7 command line arguments as <code>pl_noisy_DA.jl</code>.  Workflow is exactly the same as in the above, except the circuit sampled by <code>get_new_noise_circuit</code> is a noisy digital circuit.  The saved array of testing meshes is the noisy digital learned phase diagram.
   <li> <code> cluster_pl.jl </code> </li> generates and saves a testing mesh, which is an array of XXZ Hamiltonian ground states at different parameters, which
   are linearly spaced horizontally and vertically.
   <li> <code> updated_gates.jl  </code> </li> 
