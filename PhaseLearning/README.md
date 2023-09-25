@@ -18,6 +18,7 @@ states) that will be used in the learning, and files which perform the machine l
   <li> <code> cluster_pl.jl </code> </li> generates and saves a testing mesh, which is an array of XXZ Hamiltonian ground states at different parameters, which
   are linearly spaced horizontally and vertically.
   <li> <code> updated_gates.jl  </code> </li> 
+   <li> <code> gates_noise_final.jl  </code> </li> 
 </ul>
 
 #### Example: How to generate a learned phase diagram via a noisy DA circuit trained in the zAFM phase
