@@ -30,8 +30,8 @@ states) that will be used in the learning, and files which perform the machine l
   <li> <code> pl_noisy_D.jl  </code> </li> performs noisy digital phase learning, and takes the identical 7 command line arguments as <code>pl_noisy_DA.jl</code>.  Workflow is exactly the same as in the above, except the circuit sampled by <code>get_new_noise_circuit</code> is a noisy digital circuit.  The saved array of testing meshes is the noisy digital learned phase diagram.
   <li> <code> cluster_pl.jl </code> </li> performs noiseless phase learning (DA, digital, and just rotations).  This script takes the same 7 command line arguments as specified earlier, as well as one additional argument <code>circ</code>, which indicates the type of circuit to use: <code>DA</code> will generate a DA circuit, <code>D</code> will generate a digital circuit, and <circ>rots</circ> will generate a circuit with only rotation gates (this option should have <code>depth</code> specified as 1).  Learning and saves are identical as in the above scripts.
   
-  <li> <code> updated_gates.jl  </code> </li> 
-   <li> <code> gates_noise_final.jl  </code> </li> 
+  <li> <code> updated_gates.jl  </code> </li> contains the function definitions for generating digital entanglement (<code>ent_cx()</code> and <code>ent_cz()</code>), the noiseless analog Hamiltonian (<code>ryd_h()</code>), as well as the loss function evaluation (<code>full_loss_evaluation_2()</code>).
+   <li> <code> gates_noise_final.jl  </code> </li> contains the function definitions for noisy digital entanglement gates, as well as the analog Hamiltonian with the option of adding noise.
 </ul>
 
 #### Example: How to generate a learned phase diagram via a noisy DA circuit trained in the zAFM phase
