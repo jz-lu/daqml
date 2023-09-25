@@ -38,4 +38,5 @@ states) that will be used in the learning, and files which perform the machine l
 1. Decide on the desired size of your learned phase diagram (say, 20x20).  Using <code>XXZtrain.m</code>, generate a 20x20 testing mesh for your desired system size.
 2. From the 20x20 parameter mesh, pick out a state in the zAFM phase.  Input these J3/J6 and alpha values into <code>XXZtrain.m</code> to generate your desired training state.
 3. In <code>pl_noisy_DA.jl</code>, make sure the training vector and testing mesh import lines are set correctly.
-4. Run the code in a Julia terminal as follows: <code> julia pl_noisy_DA.jl 0.1 2 20 8 40 zafm 20 </code>
+4. Run the code in a Julia terminal as follows: <code> julia pl_noisy_DA.jl 0.1 2 20 8 40 zafm 20 </code> for learning rate of 0.1, depth 2, parameter mesh size 20, qubit number of 8, 40 training iterations, a training point in the zAFM phase, and 20 total repitions.
+5. If desired, take the 20 resulting noisy learned phase diagrams and average them to obtain an "averaged" learned phase diagram.
