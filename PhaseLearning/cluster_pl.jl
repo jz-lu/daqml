@@ -93,19 +93,7 @@ NUM_MEAS = num_qubit # Number of qubits to measure; initially doing 16, will cha
 NUM_OPS = 2^NUM_MEAS
 
 # Defining measurement indices
-if num_qubit == 6
-    idxs = (1, 2, 3, 4, 5, 6) 
-elseif num_qubit == 8
-    idxs = (1, 2, 3, 4, 5, 6, 7, 8) 
-elseif num_qubit == 10
-    idxs = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) 
-elseif num_qubit == 12
-    idxs = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
-elseif num_qubit == 14
-    idxs = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
-elseif num_qubit == 16
-    idxs = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
-end
+idxs = Tuple(1:num_qubit)
 
 # Defining projectors
 op0s = [put(num_qubit, k=>0.5*(I2+Z)) for k in idxs] # Projectors onto |0>
