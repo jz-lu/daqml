@@ -13,7 +13,7 @@ states) that will be used in the learning, and files which perform the machine l
 
 #### Quantum Machine Learning Files
 <ul>
-  <li> <code> pl_noisy_DA.jl </code>  </li> takes seven command line arguments.
+  <li> <code> pl_noisy_DA.jl </code> takes seven command line arguments:
   <ul>
     <li><code> lr </code> specifies the learning rate.</li>
     <li><code> depth </code> specifies the block depth of the QML circuit.</li>
@@ -23,6 +23,10 @@ states) that will be used in the learning, and files which perform the machine l
     <li><code> phase </code> specifies the phase of the training state used.</li>
     <li><code> taskid </code> specifies the number of times this learning has been performed. If one desires to perform the learning just once, rather than looking at many results for say, averaging, this parameter should be set to 1.</li>
   </ul>
+    This script imports a user-specified training state and testing mesh.  Before training begins, we define a function <code>get_new_noise_circuit()</code> which generates a circuit with depth and size specified by the command line arguments, and randomly sampled noise on the digital and analog gates.  Then the training loop begins, where the training loss (average Rydberg density) of the training state on a random noisy circuit is calculated. Gradient descent is performed on the circuit output using the Flux optimizer.  A new noisy circuit is then generated, and its parameters are updated accordingly. This loop continues <code>nits</code> times.
+    After training is completed, the circuit with its final updated parameters is used to find the loss (average Rydberg density) at each point in the testing mesh.  This <code>mesh</code>x<code>mesh</code> array of losses is then saved in an <code>.npy</code> array titled <code>Testlosses</code> with additional labels specifed by the command line arguments.
+   </li>
+  
   <li> <code> pl_noisy_D.jl  </code> </li> generates and saves a training state, which is a ground state of the XXZ Hamiltonian (with specified qubit number/parameters).
   <li> <code> cluster_pl.jl </code> </li> generates and saves a testing mesh, which is an array of XXZ Hamiltonian ground states at different parameters, which
   are linearly spaced horizontally and vertically.
