@@ -28,7 +28,7 @@ states) that will be used in the learning, and files which perform the machine l
    </li>
   
   <li> <code> pl_noisy_D.jl  </code> </li> performs noisy digital phase learning, and takes the identical 7 command line arguments as <code>pl_noisy_DA.jl</code>.  Workflow is exactly the same as in the above, except the circuit sampled by <code>get_new_noise_circuit</code> is a noisy digital circuit.  The saved array of testing meshes is the noisy digital learned phase diagram.
-  <li> <code> cluster_pl.jl </code> </li> generates and saves a testing mesh, which is an array of XXZ Hamiltonian ground states at different parameters, which
+  <li> <code> cluster_pl.jl </code> </li> performs noiseless phase learning (DA, digital, and just rotations).  This script takes the same 7 command line arguments as specified earlier, as well as one additional argument <code>circ</code>, which indicates the type of circuit to use: <code>DA</code> will generate a DA circuit, <code>D</code> will generate a digital circuit, and 
   are linearly spaced horizontally and vertically.
   <li> <code> updated_gates.jl  </code> </li> 
    <li> <code> gates_noise_final.jl  </code> </li> 
