@@ -2,8 +2,6 @@
 
 This directory contains the MATLAB files used to calculate the 8-qubit XXZ chain's 4 g.s. order parameters, the raw data for the plots, and Python code to generate the plots.
 
-# TODO (unfinished)
-
 #### Order Parameter Calculation
 <ul>
   <li> <code> get_OVBS.m </code>, <code> get_qzAFM.m </code>, <code> get_zAFM.m </code>, <code> get_XAFM.m </code>  </li> all use the Hamiltonian defined in <code> Ham_XXZ_J3J6.m </code> (see PhaseLearning folder) to calculate the VBS, qzAFM, zAFM, and XAFM order parameters, respectively.
