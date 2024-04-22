@@ -11,7 +11,7 @@ This directory contains the raw data files for the sharpness comparison plot pre
 
 #### Plotting code
   <ul>
-    <li><code> sharpness_comparison.py </code> defines the function <code>get_sharpness(nq, d, circ)</code>.  This function splits the final test losses (for each given depth) in <code>num_trials</code> groups of <code>trial_size</code> arrays (in this case 5 and 20, respectively, for the total of 100 diagrams per depth). This program then calculates the "sharpness" for the averaged PD of <code>trial_size</code diagrams, which is defined as the standard deviation of the gradient of the diagram.  This number is calculated for all 13 depths for all 3 circuit types, and then plotted with error bars.
+    <li><code> sharpness_comparison.py </code> defines the function <code>get_sharpness(nq, d, circ)</code>.  This function splits the final test losses (for each given depth) in <code>num_trials</code> groups of <code>trial_size</code> arrays (in this case 5 and 20, respectively, for the total of 100 diagrams per depth). This program then calculates the "sharpness" for the averaged PD of <code>trial_size</code> diagrams, which is defined as the standard deviation of the gradient of the diagram.  This number is calculated for all 13 depths for all 3 circuit types, and then plotted with error bars.
        </li>
     
   </ul>
