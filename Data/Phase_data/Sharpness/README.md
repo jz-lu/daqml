@@ -5,7 +5,7 @@ This directory contains the raw data files for the sharpness comparison plot pre
 
 #### Raw Data
 <ul>
-  <li>  <code> Testlosses_D </code>, <code> Testlosses_DA_Rbovera=0.98 </code>, and <code> Testlosses_DA_Rbovera=0.87 </code>  </li> are folders containing 1,300 final "test loss" arrays (i.e. Learned phase diagrams) for digital, DA with Rb/a = 0.98, and DA with Rb/a = 0.87 circuits respectively.  There are 100 arrays generated at each circuit depth (from 2 to 14), totalling in 1,300 per folder.
+  <li>  <code> Testlosses_digital </code>, <code> Testlosses_DA_Rbovera=0.98 </code>, and <code> Testlosses_DA_Rbovera=0.87 </code>  </li> are folders containing 1,300 final "test loss" arrays (i.e. Learned phase diagrams) for digital, DA with Rb/a = 0.98, and DA with Rb/a = 0.87 circuits respectively.  There are 100 arrays generated at each circuit depth (from 2 to 14), totalling in 1,300 per folder.
   
 </ul>
 
