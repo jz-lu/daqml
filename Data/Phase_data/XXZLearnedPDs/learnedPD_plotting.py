@@ -151,6 +151,9 @@ clb2.ax.tick_params(labelsize=label_size)
 clb3.ax.tick_params(labelsize=label_size) 
 clb4.ax.tick_params(labelsize=label_size)
 
+# NOTE: The variables "xafm_op" and "xafm_contour_value," etc. are defined in "op_plotting.py" (XXZOrderParameterPlots github folder)
+# This code just overlays the contours from the XXZ order parameter plots to visually distinguish the phase boundaries
+# This code may be commented out if these contours are not desired
 for ax in axs.flat:
     CS1 = ax.contour(J_ratios, alphas, xafm_op['op_prime'], [xafm_contour_value], colors="blue", linestyles='dashed')
     CS2 = ax.contour(J_ratios, alphas, qzafm_op['op_prime'], [qzafm_contour_value], colors="green", linestyles='dashed')
