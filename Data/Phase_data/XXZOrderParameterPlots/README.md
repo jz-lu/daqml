@@ -13,14 +13,13 @@ This directory contains the MATLAB files used to calculate the 8-qubit XXZ chain
 
 #### Raw Data
 <ul>
-  <li>  <code> vbs_op.mat </code>, <code> qzafm_op.mat </code>, <code> zafm_op.mat </code>, <code> xafm_op.mat </code>  </li> are the raw data files for each order parameter plot.
+  <li>  <code> vbs_op.mat </code>, <code> qzafm_op.mat </code>, <code> zafm_op.mat </code>, <code> xafm_op.mat </code>  </li> are the raw data files for each order parameter plot for an 8-qubit Hamiltonian on a 20x20 parameter mesh.
   
 </ul>
 
 #### Plotting code
   <ul>
-    <li><code> lr </code> specifies the learning rate.</li>
-    <li><code> depth </code> specifies the block depth of the QML circuit.</li>
+    <li><code> op_plotting.py </code> imports the raw data, defines the contour lines for each plot, and plots a 2x2 set of labeled contour plots.</li>
   </ul>
 
   
