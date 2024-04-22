@@ -6,7 +6,7 @@ This directory contains the MATLAB files used to calculate the 8-qubit XXZ chain
 
 #### Order Parameter Calculation
 <ul>
-  <li> <code> ryd_true.npy </code>  </li> encodes an entanglement entropy plot ("true phase diagram") over a range of parameters for the Rydberg chain.
+  <li> <code> get_OVBS.m </code>  </li> encodes an entanglement entropy plot ("true phase diagram") over a range of parameters for the Rydberg chain.
   <li> <code> Z2_13_averaged.npy  </code> </li> encodes a learned phase diagram generated on a depth 5 DA circuit.
   <li> <code> ryd_rots.npy  </code> </li> encodes a learned phase diagram, trained at a different point from the above, generated on a depth 0 circuit.
 </ul>
