@@ -6,7 +6,7 @@ matplotlib.rcParams['mathtext.fontset'] = 'stix'
 matplotlib.rcParams['font.family'] = 'STIXGeneral'
 %matplotlib inline
 
-ROOT = ".\"
+ROOT = ".\" # file root at which Rb/a = 0.87
 mesh = 20
 J_ratios = np.linspace(0.01,2.5,mesh)
 alphas = np.linspace(0.01,1,mesh)
@@ -70,3 +70,39 @@ errors_8_DA = []
 for i in range(len(depth_arr_8)):
     errors_8_D.append(get_sharpness(8, depth_arr_8[i],'D')[1])
     errors_8_DA.append(get_sharpness(8, depth_arr_8[i],'DA')[1])
+
+# Repeating above with different Hamiltonian parameters
+ROOT2 = ".\" # file root at which Rb/a = 0.98
+sharpness_8_DA_2 = []
+for i in range(len(depth_arr_8)):
+    sharpness_8_DA_2.append(get_sharpness(8, depth_arr_8[i],'DA')[0])
+
+errors_8_DA_2 = []
+for i in range(len(depth_arr_8)):
+    errors_8_DA_2.append(get_sharpness(8, depth_arr_8[i],'DA')[1])
+
+# PLOTTING ---------------------------------------------------------
+# plotting side by side
+
+FONT_SIZE = 28
+label_size = FONT_SIZE - 2
+
+
+plt.rcParams["figure.figsize"] = [10, 6]
+plt.rcParams["figure.autolayout"] = True
+
+fig, ax1 = plt.subplots(1)
+
+ax1.errorbar(depth_arr_8, [x * 1000 for x in sharpness_8_DA], yerr=[x * 1000 for x in errors_8_DA], marker='o', label='DA, ' + r"$\mathrm{R}_\mathrm{b}$" + "/a = 0.87", color='red')
+ax1.errorbar(depth_arr_8, [x * 1000 for x in sharpness_8_D], yerr=[x * 1000 for x in errors_8_D], marker='o', label='Digital', color='blue')
+ax1.errorbar(depth_arr_8, [x * 1000 for x in sharpness_8_DA_2], yerr=[x * 1000 for x in errors_8_DA_2], marker='o', label='DA, ' + r"$\mathrm{R}_\mathrm{b}$" + "/a = 0.98", color='gray')
+
+
+ax1.tick_params(axis='x', labelsize=label_size)
+ax1.tick_params(axis='y', labelsize=label_size)
+
+
+ax1.legend(fontsize=label_size)
+
+ax1.set_xlabel("Number of layers " + r'($\ell$)', fontsize=FONT_SIZE)
+ax1.set_ylabel(r'$\sigma_{\mathrm{learn}}$'+ '  ' + r'$(10^{-3})$', fontsize=FONT_SIZE)
