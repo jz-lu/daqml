@@ -12,7 +12,7 @@ This directory contains the raw data files for the numerical convergence plots i
 
 #### Plotting code
   <ul>
-    <li><code> convergence_plotting.py </code> plots the 3v8 convergence data alongside the XXZ_depth2 convergence data, in the 4 regimes for circuit type and noise on/off.
+    <li><code> convergence_plotting.py </code> averages the raw training loss data, and plots the 3v8 convergence data alongside the XXZ_depth2 convergence data, in the 4 regimes for circuit type and noise on/off.
        </li>
     
   </ul>
