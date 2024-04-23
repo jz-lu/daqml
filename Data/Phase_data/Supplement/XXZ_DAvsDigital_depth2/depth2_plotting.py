@@ -125,6 +125,10 @@ clb2.ax.locator_params(nbins=4)
 clb1.ax.tick_params(labelsize=label_size) 
 clb2.ax.tick_params(labelsize=label_size)
 
+# NOTE: The variables "xafm_op" and "xafm_contour_value," etc. are defined in "op_plotting.py" (XXZOrderParameterPlots github folder)
+# This code just overlays the contours from the XXZ order parameter plots to visually distinguish the phase boundaries
+# This code may be commented out if these contours are not desired:
+
 # plotting true PD contours
 for ax in (ax1, ax2):
     CS1 = ax.contour(J_ratios, alphas, xafm_op['op_prime'], [xafm_contour_value], colors="blue", linestyles='dashed')
