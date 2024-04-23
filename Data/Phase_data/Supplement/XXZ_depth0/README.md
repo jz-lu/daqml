@@ -1,4 +1,4 @@
-# XXZ chain Depth 14 Digital vs Digital-Analog comparison
+# XXZ chain Depth 0 analysis
 
 This directory contains the raw data files for the averaged learned phase diagrams for DA and D at depth 14 presented in the paper, and Python code to generate the plots.
 
