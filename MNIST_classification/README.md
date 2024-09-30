@@ -11,6 +11,10 @@ In order to correctly encode the MNIST data, we have included a jupyter notebook
 In `binary_classifier.jl` we can train and test a binary classification model on the MNIST dataset.
 
 ---
+## Julia Setup
+This simulation was run using `Julia 1.7.1` and the included environment within `Manifest.toml` and `Project.toml`
+
+---
 
 ### Required Inputs:
 
